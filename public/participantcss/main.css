@@ -1,0 +1,260 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  line-height: 1.6;
+  background: linear-gradient(45deg, #243B55, #141E30);
+  /* Darker, more professional gradient */
+  background-attachment: fixed;
+  overflow-x: hidden;
+  margin: 0;
+  padding-bottom: 3rem;
+  /* Footer height */
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Reduce navbar height */
+/* Reduce navbar height */
+.navbar {
+  padding: 5px 10px; /* Reduce padding */
+  font-size: 16px; /* Increase font size for better visibility */
+  background: rgba(36, 59, 85, 0.8);
+}
+
+/* Adjust brand logo size */
+.navbar-brand img {
+  width: 25px;
+  height: 25px;
+}
+
+/* Adjust brand text size */
+.navbar-brand span {
+  font-size: 20px;
+}
+
+/* Increase padding and font size of navbar items */
+.navbar-nav .nav-item .nav-link {
+  padding: 8px 12px;
+  font-size: 15px;
+}
+
+/* Ensure navbar remains responsive */
+@media (max-width: 992px) {
+  .navbar-nav {
+      text-align: center;
+  }
+  .navbar-nav .nav-item {
+      display: block;
+  }
+}
+
+
+.content {
+  padding: 5rem 20px;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.content p {
+  font-size: 1.25rem;
+  color: #ddd;
+}
+
+.rules-section {
+  margin-top: 3rem;
+}
+
+.rules-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.rules-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.rule-card {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rule-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #66b3ff;
+}
+
+.rule-card p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.schedule {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.schedule h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.schedule-item {
+  margin-bottom: 1.5rem;
+}
+
+.schedule-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #66b3ff;
+}
+
+.schedule-item p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.prizes {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.prizes h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.prize-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.prize-item {
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.prize-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #66b3ff;
+}
+
+.prize-item p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.prize-money {
+  font-size: 1.8rem;
+  font-weight: 600;
+        color: #fff;
+}
+
+.certificates {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.certificates h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.certificate-text {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+.certificate-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background: rgba(36, 59, 85, 0.8);
+  /* Darker, semi-transparent footer */
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Typewriter effect */
+.typewriter {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #66b3ff;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: #66b3ff;
+  }
+}

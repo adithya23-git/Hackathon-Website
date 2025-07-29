@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Events - My Website</title>
+  <link rel="stylesheet" href="participantcss/eventandlive.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="Webnox.jpg" alt="Logo">
+      <span style="color: rgb(16, 207, 217);">WEB<span style="color: white;">NOX</span></span>
+    </div>
+    <ul>
+      <li><a href="home">Home</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="registeredevent">Registered Events</a></li>
+    
+      <li><a href="project.html">Submitted Projects</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="sponsers.html">Sponsers</a></li>
+      <li><a href="teams">Team</a></li>
+    </ul>
+  </nav>
+  <div class="content">
+    <h1 style="color: white;">Live Events</h1>
+    <div class="events-container">
+      <!-- Event 1 -->
+      <div class="event-card" data-event-id="1">
+        <img src="webdev.png" alt="Event 1">
+        <h3>WEB DEVELOPMENT</h3>
+        <p>Kick off the hackathon with inspiring talks and networking opportunities.</p>
+        <button class="register-btn">Register</button>
+      </div>
+      <!-- Event 2 -->
+      <div class="event-card" data-event-id="2">
+        <img src="aiml.png" alt="Event 2">
+        <h3>Workshop: AI & ML</h3>
+        <p>Learn the basics of Artificial Intelligence and Machine Learning.</p>
+        <button class="register-btn">Register</button>
+      </div>
+      <!-- Event 3 -->
+      <div class="event-card" data-event-id="3">
+        <img src="datascience.png" alt="Event 3">
+        <h3>DATA SCIENCE</h3>
+        <p>Connect with industry professionals and fellow participants.</p>
+        <button class="register-btn">Register</button>
+      </div>
+
+      <% events.forEach(event => { %>
+        <div class="event-card" data-event-id="<%= event._id %>">
+            <h3><%= event.title %></h3>
+            <p><%= event.description %></p>
+            <p>Prize : <%= event.prize %></p>
+            <button class="register-btn">Register</button>
+        </div>
+    <% }); %>
+    
+    </div>
+  </div>
+
+
+  
+   
+
+
+
+  <script src="participantcss/registerandlive.js"></script>
+</body>
+</html>

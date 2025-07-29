@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Your Project - My Website</title>
+  <style>
+  /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #243B55, #141E30);
+    color: #333;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(36, 59, 85, 0.8);
+    padding: 10px 20px;
+  }
+  
+  nav .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav .logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  nav .logo span {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #ff9a9e;
+  }
+  
+  .content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1, h2, h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  /* Continuous Sliding Text */
+  .sliding-text {
+    background: #0077b5;
+    color: #fff;
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 20px;
+  }
+  
+  .sliding-text p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: slide 15s linear infinite;
+  }
+  
+  @keyframes slide {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Projects Section */
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .project-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: slideIn 1s ease-out;
+  }
+  
+  .project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #0077b5;
+  }
+  
+  .project-card .marks p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Submit Link Section */
+  .submit-link {
+    margin-top: 40px;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    background-color: #0077b5;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #005582;
+  }
+  
+  /* Submit Form Section */
+  .submit-form {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .submit-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .submit-form input, .submit-form select, .submit-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .submit-form button {
+    background-color: #0077b5;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-form button:hover {
+    background-color: #005582;
+  }
+  
+  /* Slide-In Animation */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="Webnox.jpg" alt="Logo">
+      <span style="color: rgb(16, 207, 217);">WEB<span style="color: white;">NOX</span></span>
+    </div>
+    <ul>
+      <li><a href="home">Home</a></li>
+      <li><a href="events">Events</a></li>
+      <li><a href="registeredevent">Registered Events</a></li>
+      
+      <li><a href="#">Submit your Projects</a></li>
+      <li><a href="project.html">submitted projects</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="sponsers.html">Sponsers</a></li>
+      <li><a href="teams">Team</a></li>
+    </ul>
+  </nav>
+
+  <div class="content">
+    <h1 style="color: white;">Submit Your Project</h1>
+
+    <!-- Submission Form -->
+    <div class="submit-form">
+      <form id="projectForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="projectType">Project Type:</label>
+        <select id="projectType" name="projectType" required>
+          <option value="web">Web Development</option>
+          <option value="data">Data Science</option>
+          <option value="aiml">AI/ML</option>
+        </select>
+        <label for="projectLink">Project Link (GitHub/Drive):</label>
+        <input type="url" id="projectLink" name="projectLink" required>
+        <label for="description">Project Description:</label>
+        <textarea id="description" name="description" rows="5" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+
+    // Handle Project Submission Form
+document.getElementById("projectForm").addEventListener("submit", (event) => {
+    event.preventDefault();
+    alert("Thank you for submitting your project! We'll review it soon.");
+    document.getElementById("projectForm").reset();
+  });
+  </script>
+</body>
+</html>

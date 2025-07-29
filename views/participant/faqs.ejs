@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - My Website</title>
+  <style>
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #243B55, #141E30);
+  color: #333;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(36, 59, 85, 0.8);
+  padding: 10px 20px;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+nav .logo span {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff9a9e;
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Team Container */
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Team Card */
+.team-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: slideIn 1s ease-out;
+}
+
+.team-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.team-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.team-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.team-card a {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #0077b5;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.team-card a:hover {
+  background-color: #005582;
+}
+
+/* Hover Effect */
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Slide-In Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Chat Container */
+.chat-container {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease-out;
+  margin-top: 20px;
+}
+
+/* Header Section */
+.chat-header {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  animation: slideDown 1s ease-in-out;
+}
+
+/* Sliding Text Animation */
+.sliding-text {
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  color: #fff;
+  animation: slideText 2s linear infinite;
+}
+
+@keyframes slideText {
+  0% { transform: translateX(7%); }
+  100% { transform: translateX(-7%); }
+}
+
+/* Chat Box */
+.chat-box {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+  color: #fff;
+}
+
+/* User & Bot Message */
+.chat-message {
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  max-width: 80%;
+}
+
+.user-message {
+  background-color: #4CAF50;
+  color: white;
+  text-align: right;
+  animation: slideInUser 0.5s ease-out;
+}
+
+.bot-message {
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  animation: slideInBot 0.5s ease-out;
+}
+
+/* Input Section */
+.user-input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.user-input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+}
+
+.send-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+
+.send-button:hover {
+  background-color: #45a049;
+  animation: scaleUp 0.3s ease;
+}
+
+/* Inbuilt Questions List */
+.questions-list {
+  margin-top: 20px;
+  display: none;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+.question-item {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.question-item:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInUser {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInBot {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+        <img src="Webnox.jpg" alt="Logo">
+        <span style="color: rgb(16, 207, 217);">WEB<span style="color: white;">NOX</span></span>
+      </div>
+    <ul>
+      <li><a href="home">Home</a></li>
+      <li><a href="events">Events</a></li>
+      <li><a href="registeredevent">Registered Events</a></li>
+      <li><a href="project.html">submitted projects</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="sponsers.html">Sponsers</a></li>
+      <li><a href="teams">Team</a></li>
+    </ul>
+  </nav>
+
+  <!-- Chat Interface -->
+  <div class="chat-container" role="complementary" aria-label="Live Chat">
+    <div class="chat-header">
+      <h1>Hackathon Live Chat Bot</h1>
+      <p class="sliding-text">Get answers to all your hackathon-related questions instantly!</p>
+    </div>
+    <div class="chat-box" id="chat-box">
+      <!-- Chat messages will appear here -->
+    </div>
+    <!-- User's custom question input -->
+    <div class="user-input-container">
+      <input type="text" id="user-input" placeholder="Ask me anything..." aria-label="Type your question" />
+      <button id="send-button" aria-label="Send your question">Send</button>
+    </div>
+    <!-- Predefined Question List -->
+    <div class="questions-list" id="questions-list">
+      <p>If you need help, select a question:</p>
+      <ul>
+        <li class="question-item" data-question="what is a hackathon?">What is a hackathon?</li>
+        <li class="question-item" data-question="how do I join a hackathon?">How do I join a hackathon?</li>
+        <li class="question-item" data-question="what are the rules of a hackathon?">What are the rules of a hackathon?</li>
+        <li class="question-item" data-question="how can I win a hackathon?">How can I win a hackathon?</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sendButton = document.getElementById("send-button");
+    const userInput = document.getElementById("user-input");
+    const chatBox = document.getElementById("chat-box");
+    const questionsList = document.getElementById("questions-list");
+  
+    // List of hackathon-related questions and answers
+    const chatbotResponses = {
+      "what is a hackathon?": "A hackathon is an event where programmers and developers work collaboratively to build innovative solutions within a set time frame.",
+      "how do I join a hackathon?": "You can join a hackathon by registering online on platforms like Devpost, Hackerearth, or local event websites.",
+      "what are the rules of a hackathon?": "Each hackathon may have different rules, but generally, you need to build a project from scratch within a set time limit. Make sure to check the event rules before starting.",
+      "how can I win a hackathon?": "Winning a hackathon requires creativity, teamwork, and building a project that solves a problem. Ensure you focus on presenting your project well.",
+      // Add more questions and responses here
+    };
+  
+    // Function to append messages to chatbox
+    const appendMessage = (message, isUser = true) => {
+      const messageDiv = document.createElement("div");
+      messageDiv.classList.add("chat-message", isUser ? "user-message" : "bot-message");
+      messageDiv.textContent = message;
+      chatBox.appendChild(messageDiv);
+      chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
+    };
+  
+    // Function to handle sending messages from the user
+    const handleSend = () => {
+      const userQuestion = userInput.value.trim().toLowerCase();
+      if (userQuestion) {
+        appendMessage(userQuestion, true); // Show user's message
+        const botResponse = chatbotResponses[userQuestion] || "Sorry, I don't have an answer for that. Please select from the questions below.";
+        setTimeout(() => {
+          appendMessage(botResponse, false); // Show bot's response after a slight delay
+          if (!chatbotResponses[userQuestion]) {
+            questionsList.style.display = 'block'; // Display inbuilt questions if no answer found
+          }
+        }, 500);
+      }
+      userInput.value = ""; // Clear the input field
+      userInput.focus(); // Focus back to input field after sending
+    };
+  
+    // Function to handle when the user selects a question from the list
+    const handleQuestionSelect = (event) => {
+      const selectedQuestion = event.target.dataset.question;
+      if (selectedQuestion) {
+        appendMessage(selectedQuestion, true); // Show user's selected question
+        const botResponse = chatbotResponses[selectedQuestion];
+        setTimeout(() => appendMessage(botResponse, false), 500); // Show bot's response after a slight delay
+        questionsList.style.display = 'none'; // Hide the list after a selection is made
+      }
+    };
+  
+    // Add event listeners to each question item
+    const questionItems = document.querySelectorAll(".question-item");
+    questionItems.forEach(item => {
+      item.addEventListener("click", handleQuestionSelect);
+    });
+  
+    // Event listener for the send button
+    sendButton.addEventListener("click", handleSend);
+  
+    // Event listener for the Enter key (to send the message)
+    userInput.addEventListener("keypress", (event) => {
+      if (event.key === "Enter") {
+        handleSend();
+      }
+    });
+  });
+
+  </script>
+</body>
+</html>

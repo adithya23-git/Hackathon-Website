@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sponsors - My Website</title>
+  <style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #243B55, #141E30);
+    color: #333;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(36, 59, 85, 0.8);
+    padding: 10px 20px;
+  }
+  
+  nav .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav .logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  nav .logo span {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #ff9a9e;
+  }
+  
+  .content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Sponsors Container */
+  .sponsors-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Sponsor Card */
+  .sponsor-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .sponsor-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+  }
+  
+  .sponsor-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .sponsor-card p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Hover Effect */
+  .sponsor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Floating Animation */
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+        <img src="Webnox.jpg" alt="Logo">
+        <span style="color: rgb(16, 207, 217);">WEB<span style="color: white;">NOX</span></span>
+      </div>
+    <ul>
+      <li><a href="home">Home</a></li>
+      <li><a href="events">Events</a></li>
+      <li><a href="registeredevent">Registered Events</a></li>
+    
+      <li><a href="project.html">Submitted Projects</a></li>
+
+      <li><a href="contact-us.html">Contact Us</a></li>
+      <li><a href="faqs.html">FAQs</a></li>
+      <li><a href="#">Sponsers</a></li>
+      <li><a href="teams">Team</a></li>
+    </ul>
+  </nav>
+  <div class="content">
+    <h1 style="color: #fff;">Our Sponsors</h1>
+    <div class="sponsors-container">
+      <!-- Sponsor 1 -->
+      <div class="sponsor-card">
+        <img src="spon/facebook.webp" alt="Sponsor 1 Logo">
+        <h3>FaceBook</h3>
+        <p>Leading provider of innovative solutions.</p>
+      </div>
+      <!-- Sponsor 2 -->
+      <div class="sponsor-card">
+        <img src="spon/microsoft.webp" alt="Sponsor 2 Logo">
+        <h3>Microsoft</h3>
+        <p>Global leader in technology and services.</p>
+      </div>
+      <!-- Sponsor 3 -->
+      <div class="sponsor-card">
+        <img src="spon/salesforce.webp" alt="Sponsor 3 Logo">
+        <h3>Salesforce</h3>
+        <p>Transforming industries with cutting-edge solutions.</p>
+      </div>
+      <!-- Sponsor 4 -->
+      <div class="sponsor-card">
+        <img src="spon/ibm.webp" alt="Sponsor 4 Logo">
+        <h3>IBM</h3>
+        <p>Driving innovation in the digital age.</p>
+      </div>
+      <!-- Sponsor 5 -->
+      <div class="sponsor-card">
+        <img src="spon/Amazon 2024 New.png" alt="Sponsor 5 Logo">
+        <h3>Amazon</h3>
+        <p>Empowering businesses with advanced tools.</p>
+      </div>
+      <!-- Sponsor 6 -->
+      <div class="sponsor-card">
+        <img src="spon/Google G Icon.png" alt="Sponsor 6 Logo">
+        <h3>Google</h3>
+        <p>Delivering excellence in every solution.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

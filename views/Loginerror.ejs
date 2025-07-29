@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Error</title>
+<style>
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: white; /* Gradient background */
+  margin: 0; /* Remove default margins */
+}
+
+.error-container {
+  background-color: rgb(168, 167, 167);
+  padding: 30px; /* Increased padding */
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Softer shadow */
+  text-align: center;
+  width: 350px; /* Set a max-width for better responsiveness */
+}
+
+.error-title {
+  color: #333; /* Darker title color */
+  margin-bottom: 15px;
+}
+
+.error-message {
+  color: #d32f2f; /* Red error message */
+  margin-bottom: 20px;
+}
+
+
+.login-link {
+  display: inline-block;
+  padding: 12px 25px; /* Adjust padding */
+  background-color: #2196f3; /* Blue button */
+  color: white;
+  text-decoration: none;
+  border-radius: 6px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+.forgot-password{
+    margin-top: 10px;
+}
+
+.login-link:hover {
+  background-color: #1976d2; /* Darker blue on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+}
+
+/* Responsive adjustments (optional) */
+@media (max-width: 400px) {
+  .error-container {
+    width: 90%; /* Make container take up more width on smaller screens */
+    padding: 20px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="error-container">
+    <h1>❌</h1>
+  <h2 class="error-title">Login Failed</h2>
+  <p class="error-message">Invalid email or password. Please try again.</p>
+  <p class="error-message">Check your roles once !!</p>
+  <a href="/" class="login-link">Back to Login</a>
+  <div class="forgot-password">
+    <a href="resetpassword">Forgot Password?</a>
+  </div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
